@@ -26,12 +26,12 @@
                     <label for="email"> E-mail:</label>
                 </td>
                 <td>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" placeholder="Digite seu email com @">
                 </td>
             </tr>
 
             <tr>
-                 <td>
+                <td>
                     <label for="email"> E-mail (patter):</label>
                 </td>
                 <td>
@@ -41,10 +41,77 @@
 
             <tr>
                 <td>
-                    <label for="senha"></label>
-                    <input type="password" id="senha" name="senha">
+                    <label for="password">Senha</label>
+                </td>
+                <td>
+                    <input type="password" name="senha-usuario" id="senha-usuario" placeholder="Digite sua senha">
+                </td>
+
+            <tr>
+                <td>
+                    <label for="date">Data de Nascimento</label>
+                </td>
+                <td>
+                    <input type="date" id="data-nascimento" name="data-nascimento">
                 </td>
             </tr>
+
+            <tr>
+                <td colspan="2">Deixe seu comentário:
+                    <br><textarea name="comentario" cols="50" rows="10" placeholder="Escreva aqui um comentário"
+                        readonly></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="matéria de interesse">Matéria de Interesse:</label>
+                    <br><input type="radio" id="opcao-materia" name="opcao-materia" value="Backend">Backend
+                    <br><input type="radio" id="opcao-materia" name="opcao-materia" value="FrontEnd">FrontEnd
+                    <br><input type="radio" id="opcao-materia" name="opcao-materia" value="FullStack">FullStack
+                </td>
+
+                <td>Tipo de Viagem:
+                    <br><input type="radio" id="opcao-viagem" name="opcao-viagem" value="Negócios">Negócios
+                    <br><input type="radio" id="opcao-viagem" name="opcao-viagem" value="Lazer">Lazer
+                    <br><input type="radio" id="opcao-viagem" name="opcao-viagem" value="Turismo">Turismo
+                    <br><input type="radio" id="opcao-viagem" name="opcao-viagem" value="Acadêmico">Acadêmico
+                </td>
+
+                <tr>
+                    <td rowspan="2">
+                        <label for="Esporte Favorito">Esporte Favorito</label>
+                        <select name="Esporte favorito" size="1">
+                            <option value="">Selecione</option>
+                            <option value="Futebol">Futebol</option>
+                            <option value="Basquete">Basquete</option>
+                            <option value="Vôlei">Vôlei</option>
+                            <option value="Tênis">Tênis</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <label for="Investimentos">Investimentos:</label>
+                        <select name="Investimentos" size="1">
+                            <option value="Poupança">Poupança</option>
+                            <option value="CDB">CDB</option>
+                            <option value="Tesouro direto">Tesouro Direto</option>
+                            <option value="Fundos Imobiliários">Fundos Imobiliários</option>
+                            <option value="Criptmoedas">Criptomoedas</option>
+                            <option value="Ações">Ações</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="Cor">Escolha uma cor:</label>
+                        
+                    </td>
+                </tr>
+
+
+
+
 
 
 
