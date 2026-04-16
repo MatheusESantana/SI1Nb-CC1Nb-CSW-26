@@ -8,9 +8,11 @@
 </head>
 
 <body>
-    <form action="mailto:seu.email@seuemail.com" method="post">
 
-        <table border="1">
+    <h1>Formulário</h1>
+    <form action="mailto:seu.email@seuemail.com" method="post" enctype="text/plain">
+
+        <table border="1" cellpading="" cellspacing="">
             <tr>
                 <td>
                     <label for="">Nome:</label>
@@ -77,41 +79,59 @@
                     <br><input type="radio" id="opcao-viagem" name="opcao-viagem" value="Acadêmico">Acadêmico
                 </td>
 
-                <tr>
-                    <td rowspan="2">
-                        <label for="Esporte Favorito">Esporte Favorito</label>
-                        <select name="Esporte favorito" size="1">
-                            <option value="">Selecione</option>
-                            <option value="Futebol">Futebol</option>
-                            <option value="Basquete">Basquete</option>
-                            <option value="Vôlei">Vôlei</option>
-                            <option value="Tênis">Tênis</option>
-                        </select>
-                    </td>
+            <tr>
+                <td rowspan="1">
+                    <label for="Esporte Favorito">Esporte Favorito</label>
+                    <select name="Esporte favorito" size="1">
+                        <option value="">Selecione</option>
+                        <option value="Futebol">Futebol</option>
+                        <option value="Basquete">Basquete</option>
+                        <option value="Vôlei">Vôlei</option>
+                        <option value="Tênis">Tênis</option>
+                    </select>
+                </td>
 
-                    <td>
-                        <label for="Investimentos">Investimentos:</label>
-                        <select name="Investimentos" size="1">
-                            <option value="Poupança">Poupança</option>
-                            <option value="CDB">CDB</option>
-                            <option value="Tesouro direto">Tesouro Direto</option>
-                            <option value="Fundos Imobiliários">Fundos Imobiliários</option>
-                            <option value="Criptmoedas">Criptomoedas</option>
-                            <option value="Ações">Ações</option>
-                        </select>
-                    </td>
-                </tr>
+                <td rowspan="1">
+                    <label for="Investimentos">Investimentos:</label>
+                    <select name="Investimentos" size="1">
+                        <option value="Poupança">Poupança</option>
+                        <option value="CDB">CDB</option>
+                        <option value="Tesouro direto">Tesouro Direto</option>
+                        <option value="Fundos Imobiliários">Fundos Imobiliários</option>
+                        <option value="Criptmoedas">Criptomoedas</option>
+                        <option value="Ações">Ações</option>
+                    </select>
+                </td>
+            </tr>
 
-                <tr>
-                    <td>
-                        <label for="Cor">Escolha uma cor:</label>
-                        
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    <label for="Cor">Escolha uma cor:</label>
+                    <input type="color">
+                </td>
+                <td>
+                    <label for="Arquivo">Selecione um arquivo</label>
+                    <input type="file">
+                </td>
+            </tr>
 
+            <tr>
+                <td colspan="2">
+                    <label for="Data e hora">Data e Hora:</label>
+                    <input type="date"><input type="time">
+                </td>
+            </tr>
 
-
-
+            <tr>
+                <td>
+                    <label for="Enviar"></label>
+                    <input type="submit">
+                </td>
+                <td>
+                    <label for="Limpar"></label>
+                    <input type="reset">
+                </td>
+            </tr>
 
 
 
