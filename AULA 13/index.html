@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,36 +9,57 @@
 </head>
 
 <body>
-    <header>
-<p style="color: rgb(255, 253, 253); font-size: xx-large; box-shadow: 0.1; text-align: center;">Aula 13 - Flexbox</p>
-<nav>
-<ul>
-    <il>P1</il>
-    <il>P2</il>
-    <il>P3</il>
-    <il>P4</il>
-</ul>
-</nav>
+
+    <header class="topo">
+
+        <h1 class="topo-titulo"> AULA 13 - Flexbox</h1>
+
+        <nav>
+            <ul type="none">
+                <li><a href="#"> P1 </a></li>
+                <li><a href="#"> P2 </a></li>
+                <li><a href="#"> P3 </a></li>
+                <li><a href="#"> P4 </a></li>
+            </ul>
+        </nav>
+
     </header>
 
-<main>
-<section> 
-    <div class="container">
-        <h1>AAAAAAAAA</h1>
-        <p>bbbbbbbb</p>
-    </div>
+    <main>
+        
+        <section id="p1" class="secao">
+            <h2 class="secao-titulo">Exercício 1 — Contêiner Flexbox Simples</h2>
+            <div class="flex-simples">
+                <div class="item-simples">Item A</div>
+                <div class="item-simples">Item B</div>
+                <div class="item-simples">Item C</div>
+            </div>
+        </section>
 
-    <div class="container">
-<h1>CCCCCCCCCC</h1>
-        <p>ddddddddd</p>
-</div>
+        <!-- PASSO 2: Três itens com flex-grow: 1, cores diferentes e underline no hover -->
+        <section id="p2" class="secao">
+            <h2 class="secao-titulo">Exercício 2 — flex-grow: 1 | Cores diferentes | Underline no hover</h2>
+            <div class="flex-igual">
+                <div class="item-igual item-a">Item 1</div>
+                <div class="item-igual item-b">Item 2</div>
+                <div class="item-igual item-c">Item 3</div>
+            </div>
+        </section>
 
-<div class="container">
-        <h1>EEEEEEEEE</h1>
-        <p>ffffffffff</p>
-</div>
-</section>
-</main>
+        <!-- PASSO 3: Cinco itens, terceiro com flex-grow: 2, clique muda cor, alinhados à direita -->
+        <section id="p3" class="secao">
+            <h2 class="secao-titulo">Exercício 3 — flex-grow | Clique muda cor | justify-content: flex-end</h2>
+            <div class="flex-cinco">
+                <div class="item-cinco">Item 1</div>
+                <div class="item-cinco">Item 2</div>
+                <div class="item-cinco item-especial" onclick="this.classList.toggle('clicado')">Item 3 ★</div>
+                <div class="item-cinco">Item 4</div>
+                <div class="item-cinco">Item 5</div>
+            </div>
+        </section>
+
+    </main>
 
 </body>
+
 </html>

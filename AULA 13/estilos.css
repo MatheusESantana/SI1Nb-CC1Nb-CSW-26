@@ -1,21 +1,68 @@
  :root {
-    --cor1:rgb(243, 243, 243) ;
-    --cor2:rgb(3, 50, 68);
-    --cor3:rgb(15, 6, 9);
-    --cor4:rgba(1, 78, 172, 0.2);
-    --cor5:rgb(15, 112, 128);
-    --cor6:rgb(0, 133, 122);
+     --cor1: rgb(243, 243, 243);
+     --cor2: rgb(3, 50, 68);
+     --cor3: rgb(15, 6, 9);
+     --cor4: rgba(1, 78, 172, 0.2);
+     --cor5: rgb(15, 112, 128);
+     --cor6: rgb(0, 133, 122);
  }
- 
- header {
+
+ /*HEADER*/
+ .topo {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 20px;
      background-color: var(--cor2);
-     font-family: Arial, Helvetica, sans-serif;
-     font-size: 1em;
-     color: var(--cor1);
-     font-weight: bolder;
-     text-align: justify;
  }
- 
+
+ /* Zona esquerda vazia — equilibra o espaço da nav no lado direito */
+ .topo::before {
+     content: '';
+     flex: 1;
+ }
+
+ .topo-titulo {
+     flex: 1;
+     text-align: center;
+     margin: 0;
+     color: rgb(255, 253, 253);
+     font-size: xx-large;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+ }
+
+ .topo nav {
+     flex: 1;
+     display: flex;
+     justify-content: flex-end;
+ }
+
+
+ .topo nav {
+     margin-left: auto;
+ }
+
+ .topo nav a {
+     color: white;
+     text-decoration: none;
+     margin-left: 15px;
+ }
+
+
+ .topo nav a:hover {
+     color: var(--cor6);
+ }
+
+
+ .topo nav ul {
+     display: flex;
+     gap: 10px;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ /*BODY*/
  body {
      background-color: var(--cor1);
      font-family: Arial, Helvetica, sans-serif;
@@ -25,41 +72,127 @@
      text-align: justify;
  }
 
- .container {
-    max-width: 80%;   /* largura máxima do conteúdo */
-    margin: 40px auto;  /* centraliza horizontalmente */
-    padding: 30px;      /* espaço interno (respiro) */
-    background-color: white; /* opcional (efeito de “cartão”) */
-    border-radius: 8px; /* opcional */
-    box-shadow: 5px 5px 15px var(--cor4);
+ /*SECOES*/
+
+ main {
     display: flex;
     flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
 }
+ .secao {
+     max-width: 90%;
+     margin: 40px auto;
+     padding: 30px;
+     background-color: white;
+     border-radius: 8px;
+     box-shadow: 5px 5px 15px var(--cor4);
+ }
 
- h1 {
+ .secao-titulo {
      color: var(--cor5);
      font-size: 35px;
      background-color: aliceblue;
      font-family: 'Times New Roman', Times, serif;
  }
 
- h2 {
-     color: var(--cor6);
-     font-size: 25px;
-     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-     background-color: aliceblue;
+ .flex-simples {
+     display: flex;
+     gap: 12px;
+     flex-direction: column;
  }
 
- .p:hover{
-     margin-bottom: 12px;
-     text-indent: 30px;
-     line-height: 1.6;
-     transform: 15%;
-     transition: 0.5;
-     box-shadow: var(--cor4);
+ .item-simples {
+     padding: 20px;
+     background-color: var(--cor4);
+     border: 2px solid var(--cor5);
+     border-radius: 6px;
+     text-align: center;
+     font-weight: bold;
+     color: var(--cor2);
  }
 
- h1,
- h2 {
-     margin-bottom: 6px;
+
+ /* ══════════════════════════════════════════════════════
+   PASSO 2 — Três itens com flex-grow: 1 + cores + hover
+   ══════════════════════════════════════════════════════ */
+ .flex-igual {
+     display: flex;
+     gap: 12px;
+     flex-direction: column;
+ }
+
+ .item-igual {
+     flex-grow: 1;
+     /* todos crescem igualmente */
+     padding: 30px 20px;
+     border-radius: 6px;
+     text-align: center;
+     font-weight: bold;
+     font-size: 1.1rem;
+     cursor: default;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+ }
+
+ /* Cores diferentes para cada item */
+ .item-a {
+     background-color: #b2dfdb;
+     color: #00574b;
+ }
+
+ .item-b {
+     background-color: #bbdefb;
+     color: #0d3b6e;
+ }
+
+ .item-c {
+     background-color: #f8bbd0;
+     color: #7b003c;
+ }
+
+ /* Sublinhado ao passar o mouse */
+ .item-igual:hover {
+     transform: scale(1.03);
+     text-decoration: underline;
+ }
+
+
+ /* ══════════════════════════════════════════════════════
+   PASSO 3 — Cinco itens | 3º cresce 2x | clique muda cor
+              | justify-content: flex-end
+   ══════════════════════════════════════════════════════ */
+ .flex-cinco {
+     display: flex;
+     gap: 10px;
+     flex-direction: row;
+     justify-content: flex-end;
+ }
+
+ .item-cinco {
+     flex-grow: 1;
+     /* crescimento padrão */
+     padding: 30px 10px;
+     border-radius: 6px;
+     text-align: center;
+     font-weight: bold;
+     background-color: #e0e0e0;
+     color: #333;
+     transition: background-color 0.3s;
+ }
+
+ /* Terceiro item cresce o dobro */
+ .item-especial {
+     flex-grow: 2;
+     /* cresce 2x mais que os outros */
+     background-color: var(--cor5);
+     color: white;
+     cursor: pointer;
+ }
+
+ /* Cor ao clicar (toggle via JS com classList) */
+ .item-especial.clicado {
+     background-color: #e65100;
+     /* laranja ao clicar */
+     color: white;
  }
