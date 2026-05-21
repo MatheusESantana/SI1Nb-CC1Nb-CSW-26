@@ -1,0 +1,97 @@
+:root {
+     --cor1: rgb(243, 243, 243);
+     --cor2: rgb(197, 162, 6);
+     --cor3: rgb(15, 6, 9);
+     --cor4: rgba(1, 78, 172, 0.2);
+     --cor5: rgb(15, 112, 128);
+     --cor6: rgb(0, 133, 122);
+ }
+
+
+ .topo {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 20px;
+     background-color: var(--cor2);
+ }
+
+  .topo::before {
+     content: '';
+     flex: 1;
+ }
+
+
+  .topo-titulo {
+     flex: 1;
+     text-align: center;
+     margin: 0;
+     color: rgb(255, 253, 253);
+     font-size: xx-large;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+ }
+
+ .topo nav {
+     flex: 1;
+     display: flex;
+     justify-content: flex-end;
+ }
+
+
+ .topo nav {
+     margin-left: auto;
+ }
+
+ .topo nav a {
+     color: white;
+     text-decoration: none;
+     margin-left: 15px;
+ }
+
+
+ .topo nav a:hover {
+     color: var(--cor6);
+ }
+
+  .topo nav ul {
+     display: flex;
+     gap: 10px;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+.secao {
+     max-width: 90%;
+     margin: 40px auto;
+     padding: 30px;
+     background-color: white;
+     border-radius: 8px;
+     box-shadow: 5px 5px 15px var(--cor4);
+ }
+
+  .flex-igual {
+     display: flex;
+     gap: 12px;
+     flex-direction: column;
+ }
+
+ .item-igual {
+     flex-grow: 1;
+     /* todos crescem igualmente */
+     padding: 30px 20px;
+     border-radius: 6px;
+     text-align: center;
+     font-weight: bold;
+     font-size: 1.1rem;
+     cursor: default;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+ }
