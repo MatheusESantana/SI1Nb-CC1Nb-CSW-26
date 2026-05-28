@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Idades</title>
+</head>
+
+<body>
+    <h1>Calculadora de Idade</h1><br>
+    <input type="number" placeholder="Digite ano de nascimento" id="anoNascimento">
+    <button type="submit" onclick="calculaIdade()">Enviar</button>
+    <p id="resultado"></p>
+    <br>
+
+
+
+    <h1>Calculadora de idades 2</h1>
+    <p>Dia: <input type="number" id="diaNascimento2"> <label for="mes">Mês: </label>
+        <select id="mes" name="mes" id="mesNascimento2">
+            <option value="" disabled selected>Escolha um mês...</option>
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+        </select> 
+        Ano: <input type="number" id=anoNascimento2>
+    </p>
+    <p> <button type="submit" onclick="calculaIdade2()"> Calcular </p>
+<p id="resultado2"></p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
